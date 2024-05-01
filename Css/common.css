@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: 
+    "header header header header"
+    "aside main main main"
+    "aside main main main"
+    "footer footer footer footer"
+    ;
+    height: 100vmin;
+    gap: 12px;
+    padding: 8px;
+    grid-template-rows: 20% 25% 25% 25%; /*CAMBIAR A 30% LA ULTIMA FILA CUANDO TERMINEMOS*/
+}
+
+/*INICIO DEL HEADER*/
+.header{
+    grid-area: header;
+    border-radius: 20px;
+    background-image: url("/Img/pexels-karolina-grabowska-5980859.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1{
+    color: black;
+    text-shadow: 1px 1px 4px white ;
+    font-size: 56px;
+    font-family: "Jersey 25", sans-serif;
+}
+
+.header i{
+    font-size: 56px;
+    text-shadow: 1px 1px 4px white;
+    padding: 12px;
+}
+/*FIN DEL HEADER*/
+
+
+.aside{
+    grid-area: aside;
+    background: brown;
+    border-radius: 20px;
+}
+
+.main{
+    grid-area: main;
+    background: yellow;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.footer{
+    grid-area: footer;
+    background: blue;
+    border-radius: 20px;
+}
