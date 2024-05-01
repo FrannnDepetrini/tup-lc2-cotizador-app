@@ -16,7 +16,8 @@
     height: 100vmin;
     gap: 12px;
     padding: 8px;
-    grid-template-rows: 20% 25% 25% 25%; /*CAMBIAR A 30% LA ULTIMA FILA CUANDO TERMINEMOS*/
+    grid-template-rows: 20% auto auto 25%; /*CAMBIAR A 30% LA ULTIMA FILA CUANDO TERMINEMOS*/
+    
 }
 
 /*INICIO DEL HEADER*/
@@ -46,22 +47,101 @@
 }
 /*FIN DEL HEADER*/
 
-
+/*INICIO DE SECTION*/
 .aside{
     grid-area: aside;
-    background: brown;
+    background: #A2FF85;
     border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 52px;
 }
 
+.aside_menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 48px;
+}
+
+.aside ul{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+    width: 80%;
+    list-style: none;
+}
+
+.aside ul li{
+    background-color: #6CC94E;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.35s;
+}
+
+.aside ul li:first-child{
+    background-color: #58A240;
+    width: 40%;
+    justify-items: flex-end;
+}
+
+.aside ul li:nth-child(2){
+    background-color: #6dc94e9b;
+}
+
+.aside ul li i{
+    padding: 8px;
+    font-size: 20px;
+}
+
+.aside ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Jersey 25", sans-serif;
+    font-size: 24px;
+    transition: 0.35s;
+}
+
+.aside ul li:hover{
+    background-color: #4e8d38;
+}
+
+.aside ul li a:hover{
+   color: black;
+   font-weight:bold;
+}
+
+
+.aside_user{
+    background-color: aqua;
+    width: 80%;
+    height: 150px;
+    border-radius: 24px;
+}
+
+
+/*FIN DE SECTION*/
+
+/*INICIO DEL MAIN*/
 .main{
     grid-area: main;
     background: yellow;
     border-radius: 20px;
     margin-top: 40px;
 }
+/*FIN DEL MAIN*/
 
+/*INICIO DEL FOOTER*/
 .footer{
     grid-area: footer;
     background: blue;
     border-radius: 20px;
 }
+/*FIN DEL FOOTER*/
