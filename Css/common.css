@@ -163,7 +163,7 @@ body{
     font-family: sans-serif;
 }
 .container_main{
-    background-color: yellow;
+    border: 1px solid;
     height: 100%;
     border-radius: 20px;
 }

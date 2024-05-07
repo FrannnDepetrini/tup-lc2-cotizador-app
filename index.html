@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" type="Text/Css" href="Css/common.css">
-    <link rel="Stylesheet" type="Text/Css" href="Css/Pages/styles1.css"/>
+    <link rel="Stylesheet" type="Text/Css" href="Css/Pages/styles1.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/831d55a45a.js" crossorigin="anonymous"></script>
-    
+
     <title>Index</title>
 </head>
 
 <body>
     <div class="container">
 
-        <header class="header"><i class="fa-solid fa-coins"></i><h1>CoinVerse</h1></header>
+        <header class="header"><i class="fa-solid fa-coins"></i>
+            <h1>CoinVerse</h1>
+        </header>
 
         <section class="aside">
 
@@ -60,16 +63,168 @@
 
         <main class="main">
             <p>Estas en: <strong>Inicio</strong></p>
-            <div class="container_main"></div>
+
+            <div class="container_main">
+                <h1>Pizarra de Cotizaciones</h1>
+                <div class="select">
+                    <label for="select"><strong>Seleccione una Moneda:</strong></label>
+                    <select name="select" id="">
+                        <option value="todas" selected>Todas</option>
+                        <option value="oficial">Dólar Oficial</option>
+                        <option value="blue">Dólar Blue</option>
+                        <option value="bolsa">Dólar Bolsa (MEP)</option>
+                        <option value="contado">Dólar Contado con Liqui (CCL)</option>
+                        <option value="tarjeta">Dólar Tarjeta</option>
+                        <option value="mayorista">Dólar Mayorista</option>
+                        <option value="cripto">Dólar Cripto</option>
+                        <option value="euro">Euro</option>
+                        <option value="real">Real Brasileño</option>
+                        <option value="chileno">Peso Chileno</option>
+                        <option value="uruguayo">Peso Uruguayo</option>
+                    </select>
+
+                    <button><i class="fa-solid fa-filter-circle-dollar"></i></button>
+                </div>
+
+                <p>Datos Actualizados al 07/05/2024</p>
+                <div class="divisas">
+
+                    <div class="oficial">
+                        <div class="caja_oficial">
+                            <div><h3>OFICIAL</h3></div>
+                            <div class="div_oficial_lista">
+                                <ul>
+                                    <li>COMPRA</li>
+                                    <li>$ 847</li>
+                                </ul>
+                                <ul>
+                                    <li>VENTA</li>
+                                    <li>$ 887</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                    </div>
+
+
+
+                    <div class="blue">
+                        <div class="caja_oficial">
+                            <div><h3>BLUE</h3></div>
+                            <div class="div_oficial_lista">
+                                <ul>
+                                    <li>COMPRA</li>
+                                    <li>$ 995</li>
+                                </ul>
+                                <ul>
+                                    <li>VENTA</li>
+                                    <li>$ 1015</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                    </div>
+                    
+                    
+                    
+                    <div class="tarjeta">
+                        <div class="caja_oficial">
+                            <div><h3>TARJETA</h3></div>
+                            <div class="div_oficial_lista">
+                                <ul>
+                                    <li>COMPRA</li>
+                                    <li>$ 1355.2</li>
+                                </ul>
+                                <ul>
+                                    <li>VENTA</li>
+                                    <li>$ 1419.2</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mep">
+                        <div class="caja_oficial">
+                            <div><h3>MEP</h3></div>
+                            <div class="div_oficial_lista">
+                                <ul>
+                                    <li>COMPRA</li>
+                                    <li>$ 996.09</li>
+                                </ul>
+                                <ul>
+                                    <li>VENTA</li>
+                                    <li>$ 1000.6</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                    </div>
+                    
+                    
+                    
+                    <div class="ccl">
+                        <div class="caja_oficial">
+                            <div><h3>CCL</h3></div>
+                            <div class="div_oficial_lista">
+                                <ul>
+                                    <li>COMPRA</li>
+                                    <li>$ 1030.6</li>
+                                </ul>
+                                <ul>
+                                    <li>VENTA</li>
+                                    <li>$ 1038.6</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                    </div>
+                    
+                    
+                    
+                    <div class="cripto">
+                        <div class="caja_oficial">
+                            <div><h3>CRIPTO</h3></div>
+                            <div class="div_oficial_lista">
+                                <ul>
+                                    <li>COMPRA</li>
+                                    <li>$ 1050</li>
+                                </ul>
+                                <ul>
+                                    <li>VENTA</li>
+                                    <li>$ 1086</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                    </div>
+                
+                
+                
+                </div>
+                
+                
+                <div class="caja_api">
+                    <h4><i class="fa-solid fa-exclamation"></i> Haga click en la estrella para guardar los datos de la cotizacion en sus favoritos</h4>
+                    <div class="hijo_caja_api">
+                        <h4>Datos obtenidos de <a href=""> DolarApi.com</a></h4>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
         <footer class="footer">
             <div class="container_footer">
 
-            
+
                 <div class="footer_1">
                     <ul>
-                        <li><h3>Institucional</h3></li>
+                        <li>
+                            <h3>Institucional</h3>
+                        </li>
                         <li>><a href="">¿Quienes Somos?</a></li>
                         <li>><a href="">Socios Estrategicos</a></li>
                         <li>><a href="">Trabaje con Nosotros</a></li>
@@ -79,7 +234,9 @@
 
                 <div class="footer_2">
                     <ul>
-                        <li><h3>Acceso</h3></li>
+                        <li>
+                            <h3>Acceso</h3>
+                        </li>
                         <li>><a href="index.html">Inicio</a></li>
                         <li>><a href="miArchivo.html">Mi Archivo</a></li>
                         <li>><a href="informes.html">Informes</a></li>
@@ -89,7 +246,9 @@
 
                 <div class="footer_3">
                     <ul>
-                        <li><h3>Contacto</h3></li>
+                        <li>
+                            <h3>Contacto</h3>
+                        </li>
                         <li>Universidad Tecnólogica Nacional</li>
                         <li>ZEBALLOS 1341 - S2000BQA -</li>
                         <li>ROSARIO</li>
@@ -99,7 +258,9 @@
 
                 <div class="footer_4">
                     <ul>
-                        <li><h3>Desarrollado por: </h3></li>
+                        <li>
+                            <h3>Desarrollado por: </h3>
+                        </li>
                         <li>Joaquin Tanlongo</li>
                         <li>Francisco Depetrini</li>
                         <li>Ulises De Bonis</li>

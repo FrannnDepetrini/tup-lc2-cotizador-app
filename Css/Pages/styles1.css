@@ -1,0 +1,197 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container_main h1{
+    text-align: center;
+}
+
+.container_main{
+    padding: 16px;
+}
+
+.select{
+    background-color: rgb(255, 255, 238);
+    width: 700px;
+    height: 50px;
+    border-radius: 12px;
+    border: 2px solid lightgray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.select select{
+    height: 40px;
+}
+
+.select button{
+
+}
+
+.select button i{
+    font-size: 32px;
+    color: orangered;
+}
+
+
+
+
+/* INICIO DIVISAS */
+.divisas{
+    background-color: rgb(255, 255, 238);
+    width: 100%;
+    height: 80%;
+    border-radius: 40px;
+    border-bottom-left-radius: 90px;
+    border-top-right-radius: 90px;
+    border: 2px solid lightgray;
+
+    display: grid;
+    grid-template-areas: 
+    "oficial ccl"
+    "bluee cripto"
+    "tarjeta ."
+    "mep ."
+    ;
+
+}
+
+
+.oficial{
+    grid-area: oficial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.caja_oficial{
+    background-color: white;
+    width: 80%;
+    height: 60%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid lightgray;
+}
+
+.div_oficial_lista{
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    gap: 20px;
+}
+
+.caja_oficial ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.caja_oficial ul li{
+    width: 80px;
+}
+
+.caja_oficial ul li:first-child{
+
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+}
+
+.caja_oficial ul li:last-child{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+.blue{
+    grid-area: bluee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta{
+    grid-area: tarjeta;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mep{
+    grid-area: mep;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ccl{
+    grid-area: ccl;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cripto{
+    grid-area: cripto;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divisas i{
+    font-size:52px;
+    color: rgba(41, 41, 255, 0.266);
+    margin-left: 8px;
+}
+
+.divisas i:hover{
+    color: rgb(41, 41, 255);
+}
+
+.caja_api{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    padding: 16px;
+}
+
+.caja_api i{
+    font-size: 32px;
+}
+
+.hijo_caja_api{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+
+.hijo_caja_api h4{
+    height:30px;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    
+}
+
+.hijo_caja_api h4 a{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background: rgb(59, 59, 255);
+    border-radius: 4px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* FIN DIVISAS */
