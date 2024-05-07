@@ -28,15 +28,19 @@
     height: 40px;
 }
 
-.select button{
+/* .select button{
 
-}
+} */
 
 .select button i{
     font-size: 32px;
     color: orangered;
 }
 
+.datos_actualizados{
+    text-align: end;
+    margin-right: 80px;
+}
 
 
 

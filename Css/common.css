@@ -157,15 +157,17 @@ body{
     flex-direction: column;
     gap: 8px;
 }
-.main p{
-    text-align: end;
-    margin-right: 12px;
-    font-family: sans-serif;
-}
+
 .container_main{
     border: 1px solid;
     height: 100%;
     border-radius: 20px;
+}
+
+.migaDePan{
+    text-align: end;
+    margin-right: 12px;
+    font-family: sans-serif;
 }
 /*FIN DEL MAIN*/
 
