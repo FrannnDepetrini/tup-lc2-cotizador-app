@@ -1,0 +1,98 @@
+* {
+  font-family: sans-serif;
+}
+
+.container_main {
+  padding: 40px;
+}
+
+.container_title {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+.container_title i {
+  color: rgb(121, 241, 121);
+  font-size: 40px;
+  padding-left: 22px;
+}
+.container_title h1 {
+  padding-top: 5px;
+}
+
+.container_table {
+  border-radius: 40px;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+
+.container_table::-webkit-scrollbar {
+    width: 12px;
+    background-color: rgb(40, 60, 43);
+    border-radius: 16px;
+  }
+  
+  .container_table::-webkit-scrollbar-thumb {
+    background-color: rgb(121, 241, 121);
+    border-radius: 16px;
+  }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 40px;
+  background-color: gray;
+}
+
+.table thead {
+  background-color: gray;
+  border-radius: 40px;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.table thead tr th:first-child {
+  border-top-left-radius: 40px;
+}
+.table thead tr th:last-child {
+  border-top-right-radius: 20px;
+}
+
+.table tbody {
+  background-color: rgba(121, 241, 121, 0.301);
+}
+
+.table tbody tr td i{
+  font-size: 20px;
+  color: black;
+  transition: 0.25s;
+}
+
+.table tbody tr td i:hover{
+  color: white;
+}
+
+.table tbody tr td {
+  text-align: center;
+  height: 45px;
+  border-left: 1px rgba(0, 0, 0, 0.232) solid;
+  border-right: 1px rgba(0, 0, 0, 0.232) solid;
+}
+.fecha {
+  background-color: rgb(121, 241, 121);
+}
+
+.table tfoot {
+  background-color: gray;
+  border-radius: 20px;
+  width: 100%;
+  height: 32px;
+}
+
+#fecha_td {
+  text-align: start;
+  color: white;
+  font-weight: bold;
+}
