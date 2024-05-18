@@ -22,17 +22,24 @@
 }
 .container_titulo h1 {
   padding-left: 12px;
+  color: white;
 }
 
 .container_selector {
   grid-area: selector;
+  color: lightgray;
+}
+
+.container_selector select{
+  background-color: lightgray;
 }
 
 .container_grafico {
-  border: 1px solid black;
+  border: 1px solid rgba(255, 76, 106, 0.76);
+  box-shadow: 1px 1px 12px 1px rgb(255, 69, 100);
   border-radius: 20px;
   grid-area: grafico;
-  background-image: url(/Img/grafico.jpg);
+  background-image: url(/Img/graficoNegro.png);
   background-repeat: no-repeats;
   background-size: cover;
 }
@@ -42,13 +49,15 @@
   width: 100%;
   height: 150px;
   border-radius: 12px;
-  border: 2px solid black;
+  border: 2px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 8px;
   gap: 16px;
+box-shadow: 1px 1px 8px 1px green;
+
 }
 
 .select div {
@@ -60,17 +69,18 @@
 .select select {
   height: 40px;
   width: 450px;
+  border-radius: 8px;
 }
 
 .select i {
   font-size: 32px;
-  color: orangered;
+  color: rgb(0, 237, 0);
   transition: 0.25s;
 }
 
 .select i:hover {
   font-size: 32px;
-  color: rgb(152, 41, 0);
+  color: rgb(0, 128, 0);
 }
 
 .container_compartirInfo {
@@ -79,7 +89,7 @@
   height: 50%;
 }
 .container_compartirInfo a {
-  color: black;
+  color: lightgray;
   font-size: 20px;
 }
 
@@ -124,6 +134,8 @@
   position: sticky;
   top: 0;
   left: 0;
+  color: white;
+  font-style: italic;
 }
 
 .table thead tr th:first-child {
@@ -143,7 +155,8 @@
   transition: 0.25s;
 }
 .table tbody tr td i:hover {
-  color: white;
+  color: rgb(0, 110, 15);
+  font-size: 30px;
 }
 #down {
   font-size: 20px;
@@ -151,7 +164,8 @@
   transition: 0.25s;
 }
 #down:hover {
-  color: white;
+  color: rgb(170, 0, 0);
+  font-size: 30px;
 }
 
 .table tbody tr td {

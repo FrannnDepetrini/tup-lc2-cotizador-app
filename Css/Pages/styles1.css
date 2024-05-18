@@ -5,6 +5,7 @@
 
 .container_main h1{
     text-align: center;
+    color: white;
 }
 
 .container_main{
@@ -25,23 +26,26 @@
 
 .select select{
     height: 40px;
+    background-color: lightgray;
+    border-radius: 12px;
 }
 
 .select i{
     font-size: 32px;
-    color: orangered;
+    color: rgb(2, 54, 2);
     transition: 0.25s;
 }
 
 .select i:hover{
     font-size: 32px;
-    color: rgb(152, 41, 0);
+    color: rgb(5, 10, 0);
 }
 
 
 .datos_actualizados{
     text-align: end;
     margin-right: 80px;
+    color: lightgray;
 }
 
 
@@ -76,7 +80,7 @@
 }
 
 .caja_oficial{
-    background-color:white ;
+    background-color:rgba(251, 251, 251, 0.894) ;
     width: 80%;
     height: 60%;
     border-radius: 20px;
@@ -154,12 +158,12 @@
 
 .divisas i{
     font-size:52px;
-    color: rgba(0, 255, 64, 0.266);
+    color: rgba(0, 0, 0, 0.500);
     margin-left: 8px;
 }
 
 .divisas i:hover{
-    color: rgba(2, 94, 25, 0.766);
+    color: rgb(41, 41, 41);
 }
 
 .caja_api{
@@ -169,6 +173,7 @@
     width: 100%;
     height: 10%;
     padding: 16px;
+    color: lightgray
 }
 
 .caja_api i{
@@ -184,19 +189,18 @@
 
 .hijo_caja_api h4{
     height:30px;
-    background: lightgray;
     display: flex;
     align-items: center;
-    
+    color: lightgray;
 }
 
 .hijo_caja_api h4 a{
     display: flex;
     align-items: center;
     height: 20px;
-    background: rgb(59, 59, 255);
+    background: rgba(121, 241, 121, 0.575);
     border-radius: 4px;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin-left: 4px;
 }

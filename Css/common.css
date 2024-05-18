@@ -5,8 +5,11 @@
 }
 
 body{
-    width: 1800px;
-    margin: 0 auto;
+    
+    
+    background: url(/Img/Bitcoin21feb.jpg);
+    background-size: cover;
+    background-clip: content-box;
 }
 
 .container{
@@ -54,13 +57,15 @@ body{
 /*INICIO DE SECTION*/
 .aside{
     grid-area: aside;
-    background: #A2FF85;
+    background: #a2ff85;
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     padding: 52px;
+    border: 3px solid black;
+    transition: 2s;
 }
 
 .aside_menu{
@@ -110,11 +115,16 @@ body{
     color: white;
     font-family: "Jersey 25", sans-serif;
     font-size: 24px;
-    transition: 0.35s;
+    transition: 0.25s;
 }
 
 .aside ul li:hover{
     background-color: #4e8d38;
+}
+
+#home:hover{
+    width: 100%;
+    transition: 0.25s;
 }
 
 .aside ul li a:hover{
@@ -129,11 +139,12 @@ body{
     justify-content: center;
     padding: 12px;
     gap: 8px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.886);
     width: 100%;
     height: 200px;
     clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
     margin-top: 16px;
+    border: 3px outset;
 }
 
 .aside_user img{
@@ -168,13 +179,14 @@ body{
     text-align: end;
     margin-right: 12px;
     font-family: sans-serif;
+    color: lightgray;
 }
 /*FIN DEL MAIN*/
 
 /*INICIO DEL FOOTER*/
 .footer{
     grid-area: footer;
-    background: rgb(174, 202, 118);
+    background: rgba(47, 128, 47, 0.928);
     border-radius: 20px;
     font-family: sans-serif;
 }
@@ -226,3 +238,26 @@ body{
     font-style: italic;
 }
 /*FIN DEL FOOTER*/
+
+
+
+/* COMIENZO DEL SITIO RESPONSIVE */
+
+@media screen and (max-width: 480px) {
+
+    body{
+        width: 100%;
+    }
+
+   .container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "aside"
+    "main"
+    "footer"
+    ;
+    grid-template-rows: 20% auto auto 30%;
+   }
+
+}

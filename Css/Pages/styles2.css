@@ -18,6 +18,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .caja_formulario{
@@ -32,11 +33,13 @@ h1{
 .caja_formulario fieldset{
     height: 90%;
     width: 90%;
-    background-color: rgb(185, 255, 162);
+    background-color: rgba(128, 128, 128, 0.848);
     border-radius:40px ;
     border-top-right-radius: 90px;
     border-bottom-left-radius: 90px;
     padding: 20px;
+    border: 1px solid rgba(0, 128, 0, 0.862);
+    box-shadow: 0px 0px 8px 1px green;
 }
 
 .caja_formulario form{
@@ -59,6 +62,8 @@ h1{
 .form_control input{
     padding: 12px;
     font-size: 20px;
+    background-color: lightgray;
+    border-radius: 12px;
 }
 
 .form_control_textarea{
@@ -68,6 +73,7 @@ h1{
     justify-content: space-between;
     align-items: start;
     margin-top: 32px;
+    
 }
 
 .form_control_textarea textarea{
@@ -78,6 +84,10 @@ h1{
     width: 80%;
     padding: 12px;
     font-size: 20px;
+    background-color: lightgray;
+    border-radius: 12px;
+    border: 1px solid;
+    box-shadow: 0px 0px 0px 1px;
 }
 
 .caja_formulario input{
@@ -96,15 +106,19 @@ h1{
 .botones_form input{
     height: 40px;
     width: 100px;
-    border-radius: 8px;
 }
 
-.botones_form input:first-child{
-    background-color: rgb(173, 173, 173);
-}
+.btn1{
+    background-color: transparent;
+    color: green;
+    border: 1px solid green;
+    transition: 0.25s;
+} 
 
-.botones_form input:last-child{
-    background-color: rgb(93, 246, 93);
+.btn1:hover{
+    box-shadow: 1px 1px 10px 1px green;
+    font-weight: bold;
+    transition: 0.25s;
 }
 
 .datos_utn{
@@ -121,10 +135,11 @@ h1{
     justify-content:start;
     gap: 24px;
     padding: 16px;
+    color: lightgray;
 }
 
 .datos_utn_lorem a{
-    color: rgb(128, 208, 235);
+    color: rgba(0, 128, 0, 0.896);
 }
 
 .datos_utn_box{
@@ -133,18 +148,20 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: lightgrey;
 }
 
 .box{
     width: 100%;
     height: 90%;
     border-radius: 12px;
-    border: solid 1px;
+    border: solid 1px green;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 24px;
+    box-shadow: 5px -5px 30px 2px green;
 }
 
 .box img{

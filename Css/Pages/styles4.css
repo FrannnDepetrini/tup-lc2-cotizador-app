@@ -18,6 +18,7 @@
 }
 .container_title h1 {
   padding-top: 5px;
+  color: white;
 }
 
 .container_table {
@@ -46,6 +47,8 @@
 
 .table thead {
   background-color: gray;
+  font-style: italic;
+  color: white;
   border-radius: 40px;
   height: 70px;
   position: sticky;
@@ -72,6 +75,7 @@
 
 .table tbody tr td i:hover{
   color: white;
+  font-size: 30px;
 }
 
 .table tbody tr td {
@@ -81,7 +85,7 @@
   border-right: 1px rgba(0, 0, 0, 0.232) solid;
 }
 .fecha {
-  background-color: rgb(121, 241, 121);
+  background-color: rgba(121, 241, 121, 0.887);
 }
 
 .table tfoot {
@@ -93,6 +97,7 @@
 
 #fecha_td {
   text-align: start;
-  color: white;
+  color:white;
   font-weight: bold;
+  padding-left: 4px;
 }
