@@ -17,7 +17,6 @@
     height: 50px;
     border-radius: 12px;
     border: 2px solid lightgray;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,14 +27,17 @@
     height: 40px;
 }
 
-/* .select button{
-
-} */
-
-.select button i{
+.select i{
     font-size: 32px;
     color: orangered;
+    transition: 0.25s;
 }
+
+.select i:hover{
+    font-size: 32px;
+    color: rgb(152, 41, 0);
+}
+
 
 .datos_actualizados{
     text-align: end;
