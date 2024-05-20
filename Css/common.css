@@ -7,9 +7,8 @@
 body{
     
     
-    background: url(/Img/Bitcoin21feb.jpg);
-    background-size: cover;
-    background-clip: content-box;
+
+    height: 100vh;
 }
 
 .container{
@@ -21,10 +20,14 @@ body{
     "aside main main main"
     "footer footer footer footer"
     ;
-    height: 100vmin;
+    min-height: 100vh;
     gap: 12px;
     padding: 8px;
-    grid-template-rows: 20% auto auto 30%; /*CAMBIAR A 30% LA ULTIMA FILA CUANDO TERMINEMOS*/
+    grid-template-rows: 200px auto auto 300px; /*CAMBIAR A 30% LA ULTIMA FILA CUANDO TERMINEMOS*/ 
+    background: url(/Img/Bitcoin21feb.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -350px;
 }
 
 /*INICIO DEL HEADER*/
