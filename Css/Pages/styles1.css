@@ -1,208 +1,281 @@
-*{
-    font-family: sans-serif;
-    box-sizing: border-box;
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-.container_main h1{
-    text-align: center;
-    color: white;
+.container_main h1 {
+  text-align: center;
+  color: white;
 }
 
-.container_main{
-    padding: 16px;
+.container_main {
+  padding: 16px;
 }
 
-.select{
-    background-color: rgba(121, 241, 121, 0.575);
-    width: 700px;
-    height: 50px;
-    border-radius: 12px;
-    border: 2px solid lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+.select {
+  background-color: rgba(121, 241, 121, 0.575);
+  width: 700px;
+  height: 50px;
+  border-radius: 12px;
+  border: 2px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
-.select select{
-    height: 40px;
-    background-color: lightgray;
-    border-radius: 12px;
+.select div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
-.select i{
-    font-size: 32px;
-    color: rgb(2, 54, 2);
-    transition: 0.25s;
+.select select {
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 12px;
 }
 
-.select i:hover{
-    font-size: 32px;
-    color: rgb(5, 10, 0);
+.select i {
+  font-size: 32px;
+  color: rgb(2, 54, 2);
+  transition: 0.25s;
 }
 
-
-.datos_actualizados{
-    text-align: end;
-    margin-right: 80px;
-    color: lightgray;
+.select i:hover {
+  font-size: 32px;
+  color: rgb(5, 10, 0);
 }
 
-
+.datos_actualizados {
+  text-align: end;
+  margin-right: 80px;
+  color: lightgray;
+}
 
 /* INICIO DIVISAS */
-.divisas{
-    background-color: rgba(121, 241, 121, 0.575);
-    width: 100%;
-    height: 80%;
-    border-radius: 40px;
-    border-bottom-left-radius: 90px;
-    border-top-right-radius: 90px;
-    border: 2px solid lightgray;
+.divisas {
+  background-color: rgba(121, 241, 121, 0.575);
+  width: 100%;
+  height: 80%;
+  border-radius: 40px;
+  border-bottom-left-radius: 90px;
+  border-top-right-radius: 90px;
+  border: 2px solid lightgray;
 
-    display: grid;
-    grid-template-areas: 
+  display: grid;
+  grid-template-areas:
     "oficial ccl"
     "bluee cripto"
     "tarjeta ."
-    "mep ."
-    ;
-
+    "mep .";
 }
 
-
-.oficial{
-    grid-area: oficial;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.caja_oficial {
+  background-color: rgba(251, 251, 251, 0.894);
+  width: 80%;
+  height: 60%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid black;
 }
 
-.caja_oficial{
-    background-color:rgba(251, 251, 251, 0.894) ;
-    width: 80%;
-    height: 60%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border: 2px solid black;
+.div_oficial_lista {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  gap: 20px;
 }
 
-.div_oficial_lista{
-    display: flex;
-    justify-content: space-between;
-    width: 35%;
-    gap: 20px;
+.caja_oficial ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.caja_oficial ul li {
+  width: 80px;
 }
 
-.caja_oficial ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
-.caja_oficial ul li{
-    width: 80px;
+.caja_oficial ul li:first-child {
+  color: gray;
+  font-size: 12px;
+  text-align: center;
 }
 
-.caja_oficial ul li:first-child{
-
-    color: gray;
-    font-size: 12px;
-    text-align: center;
+.caja_oficial ul li:last-child {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.caja_oficial ul li:last-child{
-    font-weight: bold;
-    font-size: 20px;
+.oficial {
+  grid-area: oficial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.blue{
-    grid-area: bluee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.blue {
+  grid-area: bluee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.tarjeta{
-    grid-area: tarjeta;
-     display: flex;
-    justify-content: center;
-    align-items: center;
+.tarjeta {
+  grid-area: tarjeta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.mep{
-    grid-area: mep;
-     display: flex;
-    justify-content: center;
-    align-items: center;
+.mep {
+  grid-area: mep;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ccl{
-    grid-area: ccl;
-     display: flex;
-    justify-content: center;
-    align-items: center;
+.ccl {
+  grid-area: ccl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cripto{
-    grid-area: cripto;
-     display: flex;
-    justify-content: center;
-    align-items: center;
+.cripto {
+  grid-area: cripto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.divisas i{
-    font-size:52px;
-    color: rgba(0, 0, 0, 0.500);
-    margin-left: 8px;
+.divisas i {
+  font-size: 52px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 8px;
 }
 
-.divisas i:hover{
-    color: rgb(41, 41, 41);
+.divisas i:hover {
+  color: rgb(41, 41, 41);
 }
 
-.caja_api{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 10%;
-    padding: 16px;
-    color: lightgray
+.caja_api {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
+  padding: 16px;
+  color: lightgray;
 }
 
-.caja_api i{
-    font-size: 32px;
+.caja_api i {
+  font-size: 32px;
 }
 
-.hijo_caja_api{
-    display: flex;
-    width: 100%;
-    justify-content: end;
+.hijo_caja_api {
+  display: flex;
+  width: 100%;
+  justify-content: end;
 }
 
-
-.hijo_caja_api h4{
-    height:30px;
-    display: flex;
-    align-items: center;
-    color: lightgray;
+.hijo_caja_api h4 {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: lightgray;
 }
 
-.hijo_caja_api h4 a{
-    display: flex;
-    align-items: center;
-    height: 20px;
-    background: rgba(121, 241, 121, 0.575);
-    border-radius: 4px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    margin-left: 4px;
+.hijo_caja_api h4 a {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  background: rgba(121, 241, 121, 0.575);
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-left: 4px;
 }
 
 /* FIN DIVISAS */
+
+/* COMIENZO DEL SITIO RESPONSIVE */
+
+@media all and (max-width: 599px) {
+  .container_main {
+    padding: 16px;
+    height: 100%;
+  }
+  .select {
+    background-color: rgba(121, 241, 121, 0.575);
+    width: 100%;
+    height: 135px;
+    border-radius: 12px;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .datos_actualizados {
+    padding-top: 8px;
+  }
+
+  .divisas {
+    grid-template-areas:
+      "oficial"
+      "ccl"
+      "bluee"
+      "cripto"
+      "tarjeta"
+      "mep";
+  }
+
+  .caja_oficial {
+    flex-direction: column;
+    align-items: start
+  }
+ 
+  .titulo_moneda {
+    align-self: center;
+  }
+
+  .div_oficial_lista {
+    width: 100%;
+  }
+
+  .oficial {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .blue {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tarjeta {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mep {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ccl {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cripto {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
