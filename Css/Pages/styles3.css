@@ -39,7 +39,7 @@
   box-shadow: 1px 1px 12px 1px rgb(255, 69, 100);
   border-radius: 20px;
   grid-area: grafico;
-  background-image: url(/Img/graficoNegro.png);
+  background-image: url(https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/graficoNegro.png?raw=true);
   background-repeat: no-repeats;
   background-size: cover;
 }
