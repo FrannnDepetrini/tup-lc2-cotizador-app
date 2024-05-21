@@ -101,3 +101,18 @@
   font-weight: bold;
   padding-left: 4px;
 }
+
+
+
+/*COMIENZO DEL SITIO RESPONSIVE*/
+
+
+@media all and (min-width: 600px) and (max-width: 1200px) {
+    
+}
+
+/*RESPONSIVE PARA CELULARES*/
+
+@media all and (max-width: 599px) {
+
+}

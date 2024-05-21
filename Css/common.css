@@ -21,7 +21,7 @@ body{
     gap: 12px;
     padding: 8px;
     grid-template-rows: 200px auto auto 300px; /*CAMBIAR A 30% LA ULTIMA FILA CUANDO TERMINEMOS*/ 
-    background: url(/Img/Bitcoin21feb.jpg);
+    background-image: url("/Img/Bitcoin21feb.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: -350px;
@@ -248,6 +248,9 @@ body{
     
 }
 
+
+/*RESPONSIVE PARA CELULARES*/
+
 @media all and (max-width: 599px) {
     body{
         width: 100%;
@@ -261,7 +264,7 @@ body{
     "main"
     "footer"
     ;
-    grid-template-rows: 150px auto 1850px auto;
+    grid-template-rows: 150px auto auto auto;
     grid-template-columns: 100%;
    }
 

@@ -117,6 +117,8 @@
   transition: 0.25s;
 }
 
+/*Datos UTN*/
+
 .datos_utn {
   grid-area: datos_utn;
   width: 90%;
@@ -165,7 +167,15 @@
   height: 190px;
 }
 
-/* COMIENZO DEL SITIO RESPONSIVE */
+
+
+/*COMIENZO DEL SITIO RESPONSIVE*/
+
+@media all and (min-width: 600px) and (max-width: 1200px) {
+    
+}
+
+/*RESPONSIVE PARA CELULARES*/
 
 @media all and (max-width: 599px) {
   .container_main {
@@ -179,8 +189,8 @@
 
   .container_main h1 {
     font-size: 25px;
-    /*Revisar de que este centrado luego*/
   }
+  
   .caja_formulario {
     width: 100%;
     height: auto;
@@ -188,7 +198,6 @@
 
   .form_control {
     flex-direction: column;
-    margin-top: 16px;
   }
 
   .form_control_textarea {
@@ -196,16 +205,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  
-
-  .form_control input {
+    height: 100%;
   }
 
   .form_control_textarea textarea {
-    min-height: 50px;
-    min-width: 200px;
-    max-width: 100px;
+    min-height: 150px;
+    max-height: 150px;
+    min-width: 80%;
+    max-width: 80%;
   }
+
+  .datos_utn {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .datos_utn_lorem {
+    height: auto;
+    text-align: center;
+  }
+  
+  .datos_utn_box {
+    width: 90%;
+    height: 350px;
+  }
+
+  .box div h1 {
+    text-align: start;
+    padding-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .box img{
+    width: 120px;
+    height: 130px;
+  }
+
+  
 }

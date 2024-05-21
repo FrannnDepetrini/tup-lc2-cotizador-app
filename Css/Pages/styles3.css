@@ -56,8 +56,7 @@
   align-items: flex-start;
   padding: 8px;
   gap: 16px;
-box-shadow: 1px 1px 8px 1px green;
-
+  box-shadow: 1px 1px 8px 1px green;
 }
 
 .select div {
@@ -190,4 +189,38 @@ box-shadow: 1px 1px 8px 1px green;
   color: white;
   font-weight: bold;
   padding-left: 8px;
+}
+
+
+
+/*COMIENZO DEL SITIO RESPONSIVE*/
+
+
+@media all and (min-width: 600px) and (max-width: 1200px) {
+    
+}
+
+/*RESPONSIVE PARA CELULARES*/
+
+@media all and (max-width: 599px) {
+  .container_main {
+    display: grid;
+    grid-template-areas:
+      "titulo"
+      "selector" 
+      "grafico"
+      "scroll";
+    grid-template-columns: repeat(5,100%);
+    grid-template-rows: auto 300px 350px 350px;
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .container_titulo {
+    justify-content: center;
+  }
+
+  .select div {
+    width: 100%;
+  }
 }
