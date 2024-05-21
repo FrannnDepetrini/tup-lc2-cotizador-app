@@ -21,7 +21,7 @@ body{
     gap: 12px;
     padding: 8px;
     grid-template-rows: 200px auto auto 300px; /*CAMBIAR A 30% LA ULTIMA FILA CUANDO TERMINEMOS*/ 
-    background-image: url("/Img/Bitcoin21feb.jpg");
+    background-image: url("https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/Bitcoin21feb.jpg?raw=true");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: -350px;
@@ -31,7 +31,7 @@ body{
 .header{
     grid-area: header;
     border-radius: 20px;
-    background-image: url("/Img/pexels-karolina-grabowska-5980859.jpg");
+    background-image: url("https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/pexels-karolina-grabowska-5980859.jpg?raw=true");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
