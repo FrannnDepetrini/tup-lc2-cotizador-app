@@ -245,7 +245,48 @@ body{
 
 
 @media all and (min-width: 600px) and (max-width: 1200px) {
+    body{
+        width: 100%;
+    }
+
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "aside"
+        "main"
+        "footer"
+        ;
+        grid-template-rows: 150px auto auto auto;
+        grid-template-columns: 100%;
+       }
+
+    /* FOOTER */
     
+    .container_footer ul{
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    .footer_1{
+        align-items: start;
+    }
+    
+    .footer_2{
+        align-items: start;
+    }
+    
+    .footer_3{
+        align-items: start;
+    }
+    
+    .footer_4{
+        align-items: start;
+    }
+    
+    .footer p{
+        font-size: 16px;
+    }
 }
 
 

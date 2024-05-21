@@ -108,7 +108,9 @@
 
 
 @media all and (min-width: 600px) and (max-width: 1200px) {
-    
+  .container_main {
+    padding: 0 4px 12px 4px; 
+  }
 }
 
 /*RESPONSIVE PARA CELULARES*/

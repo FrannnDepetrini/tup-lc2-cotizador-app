@@ -87,7 +87,6 @@
 .div_oficial_lista {
   display: flex;
   justify-content: space-between;
-  width: 35%;
   gap: 20px;
 }
 
@@ -168,8 +167,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 10%;
-  padding: 16px;
+  gap: 12px;
   color: lightgray;
 }
 
@@ -208,22 +206,9 @@
 /*COMIENZO DEL SITIO RESPONSIVE */
 
 @media all and (min-width: 600px) and (max-width: 1200px) {
-    
-}
-
-/*RESPONSIVE PARA CELULARES */
-
-@media all and (max-width: 599px) {
-  .container_main {
-    padding: 16px;
-    height: 100%;
-  }
-  .select {
-    background-color: rgba(121, 241, 121, 0.575);
+  .select { 
     width: 100%;
     height: 135px;
-    border-radius: 12px;
-    border: 2px solid lightgray;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,6 +228,7 @@
       "cripto"
       "tarjeta"
       "mep";
+      height: auto;
   }
 
   .caja_oficial {
@@ -261,6 +247,79 @@
   .oficial {
     flex-direction: column;
     gap: 8px;
+    padding-top: 12px;
+  }
+
+  .blue {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tarjeta {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mep {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ccl {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cripto {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/*RESPONSIVE PARA CELULARES */
+
+@media all and (max-width: 599px) {
+  .select { 
+    width: 100%;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .datos_actualizados {
+    padding-top: 8px;
+  }
+
+  .divisas {
+    grid-template-areas:
+      "oficial"
+      "ccl"
+      "bluee"
+      "cripto"
+      "tarjeta"
+      "mep";
+      height: auto;
+  }
+
+  .caja_oficial {
+    flex-direction: column;
+    align-items: start
+  }
+ 
+  .titulo_moneda {
+    align-self: center;
+  }
+
+  .div_oficial_lista {
+    width: 100%;
+  }
+
+  .oficial {
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 12px;
   }
 
   .blue {
