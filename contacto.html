@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/831d55a45a.js" crossorigin="anonymous"></script>
-
+    
     <title>Index</title>
 </head>
 
@@ -33,7 +33,8 @@
             </div>
 
             <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/wilson.jpg?raw=true" alt="">
+                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/wilson.jpg?raw=true"
+                alt="">
 
                 <div class="aside_user_info">
                     <h2>Joaquin Tanlongo</h2>
@@ -42,23 +43,25 @@
             </div>
 
             <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/depe.png?raw=true" alt="">
+                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/depe.png?raw=true"
+                    alt="">
 
                 <div class="aside_user_info">
                     <h2>Francisco Depetrini</h2>
                     <h5>Estudiante de Tecnicatura en Programación </h5>
                 </div>
             </div>
-
+            
             <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/uli.png?raw=true" alt="">
+                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/uli.png?raw=true"
+                    alt="">
 
                 <div class="aside_user_info">
                     <h2>Ulises De Bonis</h2>
                     <h5>Estudiante de Tecnicatura en Programación </h5>
                 </div>
             </div>
-
+            
         </section>
 
         <main class="main">
@@ -70,7 +73,7 @@
 
                     <fieldset>
                         <h2>Datos de contacto</h2>
-                        <form action="">
+                        <form id="form">
                             <div class="form_control">
                                 <label for="nombre">Nombre: </label>
                                 <input type="text" name="nombre" placeholder="Lionel Messi" maxlength="30" required>
@@ -81,27 +84,30 @@
                             </div>
                             <div class="form_control_textarea">
                                 <label for="comentario">Mensaje: </label>
-                                <textarea name="comentario" id="" cols="30" rows="10" placeholder="Comentario" maxlength="300" required></textarea>
+                                <textarea name="comentario" id="" cols="30" rows="10" placeholder="Comentario"
+                                maxlength="300" required></textarea>
                             </div>
                     </fieldset>
 
                     <div class="botones_form">
-                        <input class="btn1" type="submit" value="Limpiar">
-                        <input class="btn1" type="submit" value="Enviar">
+                        <input class="btn1" type="button" value="Limpiar">
+                        <input id="Enviar" class="btn1" type="submit" value="Enviar">
                     </div>
 
-                    </form>
+                </form>
                 </div>
 
                 <div class="datos_utn">
                     <div class="datos_utn_lorem">
-                        <h4>Si tiene alguna sugerencia o inconveniente por favor complete el siguiente formulario. Lo contactaremos a la brevedad. Gracia!!</h4>
-                        <h4>Esta web esta desarrollada ultilizando <a href="https://dolarapi.com/docs/">https://dolarapi.com/</a></h4>
-                    </div>
+                        <h4>Si tiene alguna sugerencia o inconveniente por favor complete el siguiente formulario. Lo
+                            contactaremos a la brevedad. Gracia!!</h4>
+                        <h4>Esta web esta desarrollada ultilizando <a
+                            href="https://dolarapi.com/docs/">https://dolarapi.com/</a></h4>
+                        </div>
 
-                    <div class="datos_utn_box">
+                        <div class="datos_utn_box">
 
-                        <div class="box">
+                            <div class="box">
                             <div>
                                 <h1>Datos de contacto</h1>
                                 <h4>Universidad Tecnólogica Nacional</h4>
@@ -110,11 +116,12 @@
                                 <h4>0341 - 4481871</h4>
                             </div>
 
-                            <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/utn.png?raw=true" alt="">
+                            <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/utn.png?raw=true"
+                                alt="">
                         </div>
                     </div>
                 </div>
-
+                
 
             </div>
         </main>
@@ -122,7 +129,7 @@
         <footer class="footer">
             <div class="container_footer">
 
-
+                
                 <div class="footer_1">
                     <ul>
                         <li>
@@ -134,7 +141,7 @@
                         <li>><a href="">Ayuda</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer_2">
                     <ul>
                         <li>
@@ -146,7 +153,7 @@
                         <li>><a href="contacto.html">Contactenos</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer_3">
                     <ul>
                         <li>
@@ -175,6 +182,11 @@
         </footer>
 
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('9m6VB9eZTPy1xpgLI')
+    </script>
+    <script src="Js/Pages/contacto.js"></script>
 </body>
 
 </html>

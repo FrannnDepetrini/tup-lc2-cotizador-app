@@ -155,9 +155,9 @@
   margin-left: 8px;
 }
 
-.divisas i:hover {
+/* .divisas i:hover {
   color: rgb(41, 41, 41);
-}
+} */
 
 .caja_api {
   display: flex;
