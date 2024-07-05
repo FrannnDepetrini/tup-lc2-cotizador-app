@@ -63,4 +63,13 @@ function encontrarFecha(trCercano) {
   return trCercano
 }
 
+function printTable() {
+  var contenido = document.getElementById("table_print").innerHTML;
+  console.log(contenido)
+  var contenidoOriginal = document.body.innerHTML;
+  document.body.innerHTML = contenido;
+  window.print();
+  document.body.innerHTML = contenidoOriginal;
+}
+
 actualizar_dom()

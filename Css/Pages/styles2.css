@@ -97,6 +97,7 @@
   justify-content: end;
   gap: 12px;
   padding: 12px;
+  margin-bottom: 16px;
 }
 
 .botones_form input {

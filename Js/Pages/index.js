@@ -25,7 +25,7 @@ async function esperarDatos() {
     const otros = await apiOtros();
 
     const arreglo = dolares.concat(otros);
-    console.log("Hola")
+    
     return arreglo; // Retorna el arreglo completo
   } catch (error) {
     console.error("Error al recopilar los datos:", error);
@@ -47,7 +47,7 @@ function estaEnFav(moneda) {
 } 
 
 function actualizar_dom() {
-  console.log("kaka")
+  
 esperarDatos().then((arreglo) => {
   contenedorDivisas.innerHTML = ``;
   arreglo.forEach((moneda) => {
@@ -78,7 +78,7 @@ esperarDatos().then((arreglo) => {
 function boton_filtrar() {
   const select = document.getElementById("select");
   valorSelect = select.value;
-  alert("hola")
+
   esperarDatos().then((arreglo) => {
     contenedorDivisas.innerHTML = ``;
     if (valorSelect == "Todas") {
@@ -144,6 +144,22 @@ function añadirFav(e) {
     e.classList = "fa-solid fa-star"
     listaFavs.push(listaDatos)
     localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
+    listaPrueba = [fechaDivisa, 'Peso chileno', '$ 890', '$ 891']
+    listaFavs.push(listaPrueba)
+    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
+
+    listaPrueba = ['1/07/2024', 'Euro', '$ 890', '$ 891']
+    listaFavs.push(listaPrueba)
+    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
+    listaPrueba = ['2/07/2024', 'Peso chileno', '$ 1000', '$ 891']
+    listaFavs.push(listaPrueba)
+    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
+    listaPrueba = ['30/06/2024', 'Euro', '$ 1000', '$ 1001']
+    listaFavs.push(listaPrueba)
+    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
+    listaPrueba = ['30/06/2024', 'Peso chileno', '$ 1000', '$ 891']
+    listaFavs.push(listaPrueba)
+    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
   
   }
   else {
@@ -151,7 +167,9 @@ function añadirFav(e) {
     listaFavs = listaFavs.filter(fav => fav[1] !== nombreDivisa)
     localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
   }
+  
 }
+
 
 // listaPrueba = ['29/06/2024', 'Euro', '500', '600']
 // listaFavs.push(listaPrueba)

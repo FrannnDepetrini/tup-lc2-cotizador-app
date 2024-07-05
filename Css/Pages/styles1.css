@@ -290,13 +290,7 @@
   }
 
   .divisas {
-    grid-template-areas:
-      "oficial"
-      "ccl"
-      "bluee"
-      "cripto"
-      "tarjeta"
-      "mep";
+    grid-template-columns: 1fr;
       height: auto;
   }
 

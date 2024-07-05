@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/831d55a45a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="./Js/common.js" type="module" defer></script>
     
     <title>Index</title>
 </head>
@@ -32,35 +34,41 @@
                 </ul>
             </div>
 
-            <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/wilson.jpg?raw=true"
-                alt="">
-
-                <div class="aside_user_info">
-                    <h2>Joaquin Tanlongo</h2>
-                    <h5>Estudiante de Tecnicatura en Programación </h5>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="aside_user">
+                        <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/wilson.jpg?raw=true" alt="">
+        
+                        <div class="aside_user_info">
+                            <h2>Joaquin Tanlongo</h2>
+                            <h5>Estudiante de Tecnicatura en Programación </h5>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="aside_user">
+                        <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/depe.png?raw=true" alt="">
+        
+                        <div class="aside_user_info">
+                            <h2>Francisco Depetrini</h2>
+                            <h5>Estudiante de Tecnicatura en Programación </h5>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="aside_user">
+                        <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/uli.png?raw=true" alt="">
+        
+                        <div class="aside_user_info">
+                            <h2>Francisco Depetrini</h2>
+                            <h5>Estudiante de Tecnicatura en Programación </h5>
+                        </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-
-            <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/depe.png?raw=true"
-                    alt="">
-
-                <div class="aside_user_info">
-                    <h2>Francisco Depetrini</h2>
-                    <h5>Estudiante de Tecnicatura en Programación </h5>
-                </div>
-            </div>
-            
-            <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/uli.png?raw=true"
-                    alt="">
-
-                <div class="aside_user_info">
-                    <h2>Ulises De Bonis</h2>
-                    <h5>Estudiante de Tecnicatura en Programación </h5>
-                </div>
-            </div>
+                <div class="swiper-pagination"></div>
+              </div>
             
         </section>
 
@@ -76,21 +84,21 @@
                         <form id="form">
                             <div class="form_control">
                                 <label for="nombre">Nombre: </label>
-                                <input type="text" name="nombre" placeholder="Lionel Messi" maxlength="30" required>
+                                <input id="nombre" type="text" name="nombre" placeholder="Lionel Messi" maxlength="30" required>
                             </div>
                             <div class="form_control">
                                 <label for="mail">Email: </label>
-                                <input type="mail" name="mail" placeholder="Correo@gmail.com" maxlength="50" required>
+                                <input id="mail" type="mail" name="mail" placeholder="Correo@gmail.com" maxlength="50" required>
                             </div>
                             <div class="form_control_textarea">
                                 <label for="comentario">Mensaje: </label>
-                                <textarea name="comentario" id="" cols="30" rows="10" placeholder="Comentario"
+                                <textarea id="comentario" name="comentario" id="" cols="30" rows="10" placeholder="Comentario"
                                 maxlength="300" required></textarea>
                             </div>
                     </fieldset>
 
                     <div class="botones_form">
-                        <input class="btn1" type="button" value="Limpiar">
+                        <input onclick="limpiar()" class="btn1" type="button" value="Limpiar">
                         <input id="Enviar" class="btn1" type="submit" value="Enviar">
                     </div>
 

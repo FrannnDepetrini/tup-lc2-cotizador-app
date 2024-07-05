@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/831d55a45a.js" crossorigin="anonymous"></script>
     <script defer src="Js/Pages/miArchivo.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="./Js/common.js" type="module" defer></script>
 
     <title>Index</title>
 </head>
@@ -33,32 +35,41 @@
                 </ul>
             </div>
 
-            <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/wilson.jpg?raw=true" alt="">
-
-                <div class="aside_user_info">
-                    <h2>Joaquin Tanlongo</h2>
-                    <h5>Estudiante de Tecnicatura en Programación </h5>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="aside_user">
+                        <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/wilson.jpg?raw=true" alt="">
+        
+                        <div class="aside_user_info">
+                            <h2>Joaquin Tanlongo</h2>
+                            <h5>Estudiante de Tecnicatura en Programación </h5>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="aside_user">
+                        <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/depe.png?raw=true" alt="">
+        
+                        <div class="aside_user_info">
+                            <h2>Francisco Depetrini</h2>
+                            <h5>Estudiante de Tecnicatura en Programación </h5>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="aside_user">
+                        <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/uli.png?raw=true" alt="">
+        
+                        <div class="aside_user_info">
+                            <h2>Francisco Depetrini</h2>
+                            <h5>Estudiante de Tecnicatura en Programación </h5>
+                        </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-
-            <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/depe.png?raw=true" alt="">
-
-                <div class="aside_user_info">
-                    <h2>Francisco Depetrini</h2>
-                    <h5>Estudiante de Tecnicatura en Programación </h5>
-                </div>
-            </div>
-
-            <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/uli.png?raw=true" alt="">
-
-                <div class="aside_user_info">
-                    <h2>Ulises De Bonis</h2>
-                    <h5>Estudiante de Tecnicatura en Programación </h5>
-                </div>
-            </div>
+                <div class="swiper-pagination"></div>
+              </div>
 
         </section>
 
@@ -67,14 +78,15 @@
             <div class="container_main">
 
                 <div class="container_title">
-                    <div></div>
+                    
                     <h1>Mi Archivo</h1>
-                    <i class="fa-solid fa-file"></i>
+                    <i class="fa-solid fa-print" onclick="printTable()"></i>
+                
                 </div>
 
                 <!--Inicio de tabla-->
-                <div class="container_table">
-                    <table class="table">
+                <div id="table_print" class="container_table">
+                    <table  class="table">
                        
                         <thead>
                             <tr>
@@ -87,116 +99,6 @@
                         </thead>
                         
                         <tbody class="tbody_favoritos">
-                            
-                            <!-- <tr class="fecha">
-                                <td id="fecha_td" colspan="5">15/04/2024</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar Blue</td>
-                                <td>$995</td>
-                                <td>$1015</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar MEP</td>
-                                <td>$996,09</td>
-                                <td>$1000,06</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar Tarjeta</td>
-                                <td>$1355,2</td>
-                                <td>$1419,2</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar Cripto</td>
-                                <td>$1050</td>
-                                <td>$1086</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Euro</td>
-                                <td>$1000</td>
-                                <td>$1200</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            
-                            <tr class="fecha">
-                                <td id="fecha_td" colspan="5">14/04/2024</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar Blue</td>
-                                <td>$995</td>
-                                <td>$1015</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar MEP</td>
-                                <td>$996,09</td>
-                                <td>$1000,06</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar Tarjeta</td>
-                                <td>$1355,2</td>
-                                <td>$1419,2</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar Cripto</td>
-                                <td>$1050</td>
-                                <td>$1086</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Euro</td>
-                                <td>$1000</td>
-                                <td>$1200</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr class="fecha">
-                                <td id="fecha_td" colspan="5">13/04/2024</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar MEP</td>
-                                <td>$996,09</td>
-                                <td>$1000,06</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar Tarjeta</td>
-                                <td>$1355,2</td>
-                                <td>$1419,2</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Dolar Cripto</td>
-                                <td>$1050</td>
-                                <td>$1086</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Euro</td>
-                                <td>$1000</td>
-                                <td>$1200</td>
-                                <td><i class="fa-solid fa-eraser"></i></td>
-                            </tr> -->
-    
     
                         </tbody>
                         <tfoot></tfoot>

@@ -18,3 +18,15 @@ document.getElementById('form')
       alert(JSON.stringify(err));
     });
 });
+
+
+function limpiar(){
+  var nombre = document.getElementById("nombre")
+  var email = document.getElementById("mail")
+  var comentario = document.getElementById("comentario")
+
+  nombre.value = ""
+  email.value = ""
+  comentario.value = ""
+
+}

@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/831d55a45a.js" crossorigin="anonymous"></script>
+    <script defer src="/Js/Pages/informes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="./Js/common.js" type="module" defer></script>
     
     <title>Index</title>
 </head>
@@ -29,33 +33,41 @@
                 </ul>
             </div>
 
-            <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/wilson.jpg?raw=true" alt="">
-
-                <div class="aside_user_info">
-                    <h2>Joaquin Tanlongo</h2>
-                    <h5>Estudiante de Tecnicatura en Programación </h5>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="aside_user">
+                        <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/wilson.jpg?raw=true" alt="">
+        
+                        <div class="aside_user_info">
+                            <h2>Joaquin Tanlongo</h2>
+                            <h5>Estudiante de Tecnicatura en Programación </h5>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="aside_user">
+                        <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/depe.png?raw=true" alt="">
+        
+                        <div class="aside_user_info">
+                            <h2>Francisco Depetrini</h2>
+                            <h5>Estudiante de Tecnicatura en Programación </h5>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="aside_user">
+                        <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/uli.png?raw=true" alt="">
+        
+                        <div class="aside_user_info">
+                            <h2>Francisco Depetrini</h2>
+                            <h5>Estudiante de Tecnicatura en Programación </h5>
+                        </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-
-            <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/depe.png?raw=true" alt="">
-
-                <div class="aside_user_info">
-                    <h2>Francisco Depetrini</h2>
-                    <h5>Estudiante de Tecnicatura en Programación </h5>
-                </div>
-            </div>
-
-            <div class="aside_user">
-                <img src="https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/uli.png?raw=true
-" alt="">
-
-                <div class="aside_user_info">
-                    <h2>Ulises De Bonis</h2>
-                    <h5>Estudiante de Tecnicatura en Programación </h5>
-                </div>
-            </div>
+                <div class="swiper-pagination"></div>
+              </div>
 
         </section>
 
@@ -69,31 +81,24 @@
                     <div class="select">
                         <label for="select">Seleccione una Moneda:</label>
                         <div>
-                        <select name="select" id="">
-                            <option value="todas" selected>Todas</option>
-                            <option value="oficial">Dólar Oficial</option>
-                            <option value="blue">Dólar Blue</option>
-                            <option value="bolsa">Dólar Bolsa (MEP)</option>
-                            <option value="contado">Dólar Contado con Liqui (CCL)</option>
-                            <option value="tarjeta">Dólar Tarjeta</option>
-                            <option value="mayorista">Dólar Mayorista</option>
-                            <option value="cripto">Dólar Cripto</option>
-                            <option value="euro">Euro</option>
-                            <option value="real">Real Brasileño</option>
-                            <option value="chileno">Peso Chileno</option>
-                            <option value="uruguayo">Peso Uruguayo</option>
+                        <select name="select" id="select">
+                            <option value="Todas" selected>Todas</option>
                         </select>
     
-                        <i class="fa-solid fa-filter-circle-dollar"></i>
+                        <i onclick="filtrar_divisa()" class="fa-solid fa-filter-circle-dollar"></i>
                     </div>
                     </div>
                     <div class="container_compartirInfo">
                         <i class="fa-solid fa-envelope-open-text"></i>
-                        <a href="">Compartir informacion</a>
+                        <h3 onclick="compartirInfo()" style="text-decoration: underline;">Compartir informacion</h3>
                     </div>
                 </div>
                 <div class="container_grafico">
                     <!--JavaScript-->
+                    <canvas id="miGrafico"></canvas>
+                
+
+
                 </div>
                     <div class="container_table">
                         <table class="table">
@@ -108,117 +113,7 @@
                                 </tr>
                             </thead>
                             
-                            <tbody>
-                                
-                                <tr class="moneda">
-                                    <td id="moneda_td" colspan="5">Dolar Blue</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>17/05/2024</td>
-                                    <td>$995</td>
-                                    <td>$1015</td>
-                                    <td><i class="fa-solid fa-circle-arrow-up"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>16/05/2024</td>
-                                    <td>$996,09</td>
-                                    <td>$1000,06</td>
-                                    <td><i class="fa-solid fa-circle-arrow-up"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>15/05/2024</td>
-                                    <td>$1355,2</td>
-                                    <td>$1419,2</td>
-                                    <td><i id="down" class="fa-solid fa-circle-arrow-down"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>14/05/2024</td>
-                                    <td>$1050</td>
-                                    <td>$1086</td>
-                                    <td><i class="fa-solid fa-circle-arrow-up"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>13/05/2024</td>
-                                    <td>$1000</td>
-                                    <td>$1200</td>
-                                    <td><i id="down" class="fa-solid fa-circle-arrow-down"></i></td>
-                                </tr>
-                                
-                                <tr class="moneda">
-                                    <td id="moneda_td" colspan="5">Dolar Cripto</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>17/05/2024</td>
-                                    <td>$995</td>
-                                    <td>$1015</td>
-                                    <td><i class="fa-solid fa-circle-arrow-up"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>16/05/2024</td>
-                                    <td>$996,09</td>
-                                    <td>$1000,06</td>
-                                    <td><i class="fa-solid fa-circle-arrow-up"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>15/05/2024</td>
-                                    <td>$1355,2</td>
-                                    <td>$1419,2</td>
-                                    <td><i id="down" class="fa-solid fa-circle-arrow-down"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>14/05/2024</td>
-                                    <td>$1050</td>
-                                    <td>$1086</td>
-                                    <td><i class="fa-solid fa-circle-arrow-up"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>13/05/2024</td>
-                                    <td>$1000</td>
-                                    <td>$1200</td>
-                                    <td><i class="fa-solid fa-circle-arrow-up"></i></td>
-                                </tr>
-                                <tr class="moneda">
-                                    <td id="moneda_td" colspan="5">Dolar MEP</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>17/05/2024</td>
-                                    <td>$996,09</td>
-                                    <td>$1000,06</td>
-                                    <td><i class="fa-solid fa-circle-arrow-up"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>16/05/2024</td>
-                                    <td>$1355,2</td>
-                                    <td>$1419,2</td>
-                                    <td><i class="fa-solid fa-circle-arrow-up"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>15/05/2024</td>
-                                    <td>$1050</td>
-                                    <td>$1086</td>
-                                    <td><i id="down" class="fa-solid fa-circle-arrow-down"></i></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>14/05/2024</td>
-                                    <td>$1000</td>
-                                    <td>$1200</td>
-                                    <td><i id="down" class="fa-solid fa-circle-arrow-down"></i></td>
-                                </tr>
-        
+                            <tbody class="tbody_informes">
         
                             </tbody>
                             <tfoot></tfoot>
@@ -274,6 +169,22 @@
             <p>TUP - Catedra de Laboratorio de Computacion 2 - Año 2024</p>
         </footer>
 
+    </div>
+    <div class="container_modal">
+        <h1>Datos del destinatario</h1>
+        <div class="modal">
+            <form class="form_modal">
+                <label for="nombre"> Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+                <label for="email"> Email:</label>
+                <input type="text" name="email" id="email" required>
+                <div class="div_buttons_modal">
+                <button type="submit" id="enviar">Enviar</button>
+                <button id="cancelar" >Cancelar</button>
+            </div>
+            </form>
+
+        </div>
     </div>
 </body>
 

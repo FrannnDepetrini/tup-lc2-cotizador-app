@@ -39,9 +39,9 @@
   box-shadow: 1px 1px 12px 1px rgb(255, 69, 100);
   border-radius: 20px;
   grid-area: grafico;
-  background-image: url(https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/graficoNegro.png?raw=true);
+  /* background-image: url(https://github.com/FrannnDepetrini/tup-lc2-cotizador-app/blob/main/Img/graficoNegro.png?raw=true);
   background-repeat: no-repeats;
-  background-size: cover;
+  background-size: cover; */
 }
 /* Selector */
 
@@ -149,21 +149,21 @@
   background-color: rgba(121, 241, 121, 0.301);
 }
 
-.table tbody tr td i.fa-solid {
+i.fa-circle-arrow-up {
   font-size: 20px;
   color: rgb(0, 255, 34);
   transition: 0.25s;
 }
-.table tbody tr td i:hover {
+i.fa-circle-arrow-up:hover {
   color: rgb(0, 110, 15);
   font-size: 30px;
 }
-#down {
+.fa-circle-arrow-down{
   font-size: 20px;
   color: rgb(255, 0, 0);
   transition: 0.25s;
 }
-#down:hover {
+.fa-circle-arrow-down:hover {
   color: rgb(170, 0, 0);
   font-size: 30px;
 }
@@ -192,8 +192,65 @@
   padding-left: 8px;
 }
 
+/* MODAL */
 
 
+.container_modal {
+  background-color: rgba(255, 0, 0, 0.411);
+  width: 450px;
+  height: 300px;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -100%);
+  transition: opacity 0.6s, transform 0.6s;
+  pointer-events: none;
+}
+
+.modal_show {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
+
+.container_modal h1 {
+  text-align: center;
+}
+
+.form_modal {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 4px;
+}
+
+.form_modal input {
+  width: 70%;
+  height: 35px;
+}
+
+.div_buttons_modal {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.div_buttons_modal button {
+  height: 35px;
+  width: 100px;
+  border-radius: 12px;
+}
+
+
+
+#miGrafico{
+  width: 100% !important;
+  height: 100% !important;
+}
 /*COMIENZO DEL SITIO RESPONSIVE*/
 
 
@@ -246,5 +303,8 @@
 
   .select div {
     width: 100%;
+  }
+  .container_modal {
+    width: 90%;
   }
 }
