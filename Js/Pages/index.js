@@ -2,15 +2,12 @@ var contenedorDivisas = document.querySelector("#divisas");
 
 var listaFavs = JSON.parse(localStorage.getItem("MonedasFavoritas")) || []
 
+const datosActualizados = document.querySelector(".datos_actualizados")
 
-
-  
-  
 async function apiDolar() {
   return fetch("https://dolarapi.com/v1/dolares").then((response) =>
     response.json()
   );
-  // .then((data) => data
 }
 
 async function apiOtros() {
@@ -37,7 +34,6 @@ async function esperarDatos() {
 function estaEnFav(moneda) {
   for (let monedaFav of listaFavs) { 
     var fechaActual = new Date().toLocaleDateString()
-    // console.log(fechaActual)
     var esFavorito = monedaFav.includes(moneda.nombre) && monedaFav.includes(fechaActual)
     if (esFavorito) {
       return true
@@ -47,7 +43,10 @@ function estaEnFav(moneda) {
 } 
 
 function actualizar_dom() {
-  
+  var fecha_actualizada = new Date().toLocaleDateString()
+  if (datosActualizados != fecha_actualizada){
+    datosActualizados.innerHTML = "Datos actualizados de: " +fecha_actualizada
+  }
 esperarDatos().then((arreglo) => {
   contenedorDivisas.innerHTML = ``;
   arreglo.forEach((moneda) => {
@@ -144,22 +143,6 @@ function añadirFav(e) {
     e.classList = "fa-solid fa-star"
     listaFavs.push(listaDatos)
     localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
-    listaPrueba = [fechaDivisa, 'Peso chileno', '$ 890', '$ 891']
-    listaFavs.push(listaPrueba)
-    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
-
-    listaPrueba = ['1/07/2024', 'Euro', '$ 890', '$ 891']
-    listaFavs.push(listaPrueba)
-    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
-    listaPrueba = ['2/07/2024', 'Peso chileno', '$ 1000', '$ 891']
-    listaFavs.push(listaPrueba)
-    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
-    listaPrueba = ['30/06/2024', 'Euro', '$ 1000', '$ 1001']
-    listaFavs.push(listaPrueba)
-    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
-    listaPrueba = ['30/06/2024', 'Peso chileno', '$ 1000', '$ 891']
-    listaFavs.push(listaPrueba)
-    localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
   
   }
   else {
@@ -169,11 +152,6 @@ function añadirFav(e) {
   }
   
 }
-
-
-// listaPrueba = ['29/06/2024', 'Euro', '500', '600']
-// listaFavs.push(listaPrueba)
-//   localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
 
 
 actualizar_dom()

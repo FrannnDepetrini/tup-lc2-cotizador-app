@@ -1,17 +1,12 @@
 var listaFavs = JSON.parse(localStorage.getItem("MonedasFavoritas")) || [];
 const tbody = document.querySelector(".tbody_favoritos");
 
-// console.log(tbody);
-
-
 function actualizar_dom() {
     if (listaFavs == "") {
-      // h1 = document.createElement()
       tbody.innerHTML = "No hay ninguna divisa en tu lista de favoritos";
     } else {
       var contador = 0;
       var fechaMonedaAux = listaFavs[0][0];
-    console.log("hola")
   tbody.innerHTML = ``
   fechaMonedaAux = ''
   listaFavs.forEach((moneda) => {
@@ -38,17 +33,6 @@ function borrarDivisa(e) {
   var trFechaEncontrada = encontrarFecha(trCercano)
   var fechaEncontrada = trFechaEncontrada.firstElementChild.innerText
   var nombreDivisa = trCercano.firstElementChild.nextElementSibling.innerText
-  console.log(fechaEncontrada)
-  console.log(nombreDivisa)
-  for(const fav of listaFavs) {
-    if (fav[0] == fechaEncontrada && fav[1] == nombreDivisa) {
-      console.log(fav[0])
-      console.log(typeof(fav[0]))
-      console.log(typeof(fechaEncontrada))
-      console.log(fav[1])
-
-    }
-  }
  
   listaFavs = listaFavs.filter(fav => fav[1] !== nombreDivisa || fav[0] !== fechaEncontrada);
   localStorage.setItem("MonedasFavoritas",JSON.stringify(listaFavs))
@@ -65,7 +49,6 @@ function encontrarFecha(trCercano) {
 
 function printTable() {
   var contenido = document.getElementById("table_print").innerHTML;
-  console.log(contenido)
   var contenidoOriginal = document.body.innerHTML;
   document.body.innerHTML = contenido;
   window.print();

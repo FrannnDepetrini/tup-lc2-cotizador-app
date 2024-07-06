@@ -23,7 +23,6 @@ var myChart = new Chart(ctx, {
 
 function actualizar_dom() {
     if (listaFavs == "") {
-        // h1 = document.createElement()
         tbody.innerHTML = "No hay ninguna divisa en tu lista de favoritos";
     } else {
 
@@ -34,12 +33,12 @@ function actualizar_dom() {
             grupoDeMonedas[moneda[1]].push(moneda);
         });
 
-        
+
 
         let monedasUnicas = Object.keys(grupoDeMonedas);
         tbody.innerHTML = ``
 
-        
+
         monedasUnicas.forEach((nombreMoneda) => {
             var precio_anterior = 0
             select.innerHTML += `<option value="${nombreMoneda}">${nombreMoneda}</option>`;
@@ -66,36 +65,29 @@ function actualizar_dom() {
             });
         });
 
-
-
-
-
-        /****************************************************************************/
-        /*Gráfica con varias líneas*/
-        //Axis X
         var etiquetas = [];
         var datosLinea1 = [];
         etiquetas = []
 
 
-        
+
         for (moneda1 of grupoDeMonedas[monedasUnicas[0]]) {
             if (!(moneda1[0] in etiquetas)) {
                 myChart.data.labels.push(moneda1[0])
 
-            }    
+            }
         }
-        
-        
+
+
         myChart.data.labels.push(etiquetas)
         monedasUnicas.forEach((monedaUnica) => {
-            
+
             datosLinea1 = []
             grupoDeMonedas[monedaUnica].forEach((moneda) => {
                 datosLinea1.unshift(parseFloat(moneda[2].slice(1)))
-                
+
             })
-            
+
             var newDataset = {
                 label: monedaUnica,
                 data: datosLinea1,
@@ -104,10 +96,10 @@ function actualizar_dom() {
                 borderWidth: 1,
                 fill: false
             };
-           
+
             myChart.data.datasets.push(newDataset);
             myChart.update();
-            
+
         })
     }
 }
@@ -142,12 +134,6 @@ function filtrar_divisa() {
             });
         });
 
-
-
-
-
-
-
         var etiquetas = [];
         var datosLinea1 = [];
         etiquetas = [];
@@ -155,23 +141,23 @@ function filtrar_divisa() {
         myChart.data.datasets = [];
 
 
-        
+
         for (moneda1 of grupoDeMonedas[monedasUnicas[0]]) {
             if (!(moneda1[0] in etiquetas)) {
                 myChart.data.labels.push(moneda1[0])
 
-            }    
+            }
         }
-        
+
         myChart.data.labels.push(etiquetas)
         monedasUnicas.forEach((monedaUnica) => {
-            
+
             datosLinea1 = []
             grupoDeMonedas[monedaUnica].forEach((moneda) => {
                 datosLinea1.unshift(parseFloat(moneda[2].slice(1)))
-                
+
             })
-            
+
             var newDataset = {
                 label: monedaUnica,
                 data: datosLinea1,
@@ -180,23 +166,12 @@ function filtrar_divisa() {
                 borderWidth: 1,
                 fill: false
             };
-           
+
             myChart.data.datasets.push(newDataset);
             myChart.update();
-            
+
         })
 
-
-
-
-
-
-
-
-
-
-
-        
     } else {
         tbody.innerHTML = ``
         monedasUnicas.forEach((nombreMoneda) => {
@@ -209,9 +184,9 @@ function filtrar_divisa() {
                 </tr>
                 `;
                 grupoDeMonedas[nombreMoneda].forEach((moneda) => {
-    
+
                     let subio = subio_precio(precio_anterior, moneda[2]);
-    
+
                     tbody.innerHTML += `
                         <tr>
                             <td></td>
@@ -224,14 +199,7 @@ function filtrar_divisa() {
                     precio_anterior = moneda[2].slice(1)
                 });
 
-
-
-
-
-
-
-
-                myChart.data.labels = [] 
+                myChart.data.labels = []
                 myChart.data.datasets = [];
                 var etiquetas = [];
                 var datosLinea1 = [];
@@ -239,20 +207,13 @@ function filtrar_divisa() {
 
                 etiquetas = []
 
-                
-                // console.log(moneda1[0])
-                // console.log("grupo",grupoDeMonedas[nombreMoneda])
-
                 for (moneda1 of grupoDeMonedas[nombreMoneda]) {
                     if (!(moneda1[0] in etiquetas)) {
                         myChart.data.labels.push(moneda1[0])
 
-                    }    
+                    }
                 }
-                
-                
-                
-                
+
                 datosLinea1 = []
                 datosLinea2 = []
                 grupoDeMonedas[nombreMoneda].forEach((moneda) => {
@@ -277,33 +238,11 @@ function filtrar_divisa() {
                     borderWidth: 1,
                     fill: false
                 };
-                
-                
+
                 myChart.data.labels.push(etiquetas)
                 myChart.data.datasets.push(newDataset);
                 myChart.data.datasets.push(newDataset2);
                 myChart.update();
-                
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             }
         })
@@ -332,25 +271,25 @@ function getRandomColor() {
     return color;
 }
 
-document.getElementById("enviar").addEventListener('click',(e) => {
+document.getElementById("enviar").addEventListener('click', (e) => {
     var nombre = document.getElementById("nombre")
     var mail = document.getElementById("email")
-    if (nombre.value == "" || mail.value == "" ){
+    if (nombre.value == "" || mail.value == "") {
         alert("Faltan completar datos")
-    }else{
-        nombre.value = "" 
-        mail.value = "" 
+    } else {
+        nombre.value = ""
+        mail.value = ""
         e.preventDefault()
         modal.classList.remove('modal_show')
         alert("Enviado")
     }
 })
 
-document.getElementById("cancelar").addEventListener('click',(e) => {
+document.getElementById("cancelar").addEventListener('click', (e) => {
     var nombre = document.getElementById("nombre")
     var mail = document.getElementById("email")
-    nombre.value = "" 
-    mail.value = "" 
+    nombre.value = ""
+    mail.value = ""
     e.preventDefault()
     modal.classList.remove('modal_show')
 })

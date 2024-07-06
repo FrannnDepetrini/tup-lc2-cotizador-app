@@ -114,50 +114,11 @@
   align-items: center;
 }
 
-/* .blue {
-  grid-area: bluee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tarjeta {
-  grid-area: tarjeta;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mep {
-  grid-area: mep;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ccl {
-  grid-area: ccl;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cripto {
-  grid-area: cripto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .divisas i {
   font-size: 52px;
   color: rgba(0, 0, 0, 0.5);
   margin-left: 8px;
 }
-
-/* .divisas i:hover {
-  color: rgb(41, 41, 41);
-} */
 
 .caja_api {
   display: flex;
